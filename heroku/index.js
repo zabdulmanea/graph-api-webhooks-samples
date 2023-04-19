@@ -50,6 +50,7 @@ app.post('/facebook', function(req, res) {
   received_updates.unshift(req.body);
   // let phone = received_updates[0].entry.changes[0].messages[0].from;
   var phone = "";
+  console.log(received_updates[0]);
 
   res.sendStatus(200);
 
