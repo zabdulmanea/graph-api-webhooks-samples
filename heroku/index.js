@@ -51,7 +51,6 @@ app.post('/facebook', function(req, res) {
   // let phone = received_updates[0].entry.changes[0].messages[0].from;
   let phone = "";
 
-
   res.sendStatus(200);
 
 });
