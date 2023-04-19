@@ -21,7 +21,7 @@ var token = process.env.TOKEN || 'token';
 var received_updates = [];
 
 app.get('/', function(req, res) {
-  console.log(req);
+  // console.log(req);
   res.send('<pre>' + JSON.stringify(received_updates, null, 2) + '</pre>');
 });
 
@@ -49,6 +49,8 @@ app.post('/facebook', function(req, res) {
   // Process the Facebook updates here
   received_updates.unshift(req.body);
   res.sendStatus(200);
+
+  let phone = received_updates[0].entry.changes[0].messages[0].from;
 });
 
 app.post('/instagram', function(req, res) {
