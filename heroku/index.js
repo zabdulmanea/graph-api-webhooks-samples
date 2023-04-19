@@ -49,7 +49,7 @@ app.post('/facebook', function(req, res) {
   // Process the Facebook updates here
   received_updates.unshift(req.body);
   // let phone = received_updates[0].entry.changes[0].messages[0].from;
-  let phone = "";
+  // let phone = "";
 
   res.sendStatus(200);
 
